@@ -1,0 +1,152 @@
+@import _mixin
+
+*
+    font-family: 'Montserrat', sans-serif
+
+a:hover
+    text-decoration: none
+    outline: none
+
+body
+    margin-bottom: 3.5rem
+    background: #E5E5E5
+
+html 
+    position: relative
+    min-height: 100%
+
+.container 
+	max-width: 1600px
+
+.footer 
+    position: absolute
+    bottom: 0
+    width: 100%
+    height: 3.5rem
+    line-height: 3.5rem
+    background-color: #f5f5f5
+
+.header
+    height: 60px
+    background: #F2F3F7
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05)
+    &-row
+        height: 100%
+    &-logo
+       margin-left: 100px
+       margin-right: 13px
+    &-block-text
+        margin-left: 54px
+    &__text
+        +settings_text (600, 14px, 18px, #222222)
+    &-profile
+        margin-right: 58px
+        &__text
+            margin-left: 14px
+
+.container
+    height: 100%
+
+.content
+    margin-top: 20px
+    margin-left: 80px
+    &__title
+        box-shadow: inset 0px -2px 0px #CCD4E7, inset 0px -1px 0px #FBFCFF
+        padding: 28px 385px 28px 0
+        +settings_text(bold, 24px, 26px, #222222)
+
+.about-section
+    margin-top: 36px
+
+.section__title
+    +settings_text(600, 20px, 24px, #000000)
+
+.button-hint
+    height: 20px
+    width: 20px
+    background: #198CFF
+    opacity: 0.1  
+    border-radius: 50%
+    background-image: url("..img/button.png")
+    background-position: center center
+    background-repeat: no-repeat
+    margin-left: 12px
+
+.years-number
+    width: 147px
+    background: #E5E5E5
+    border: 1px solid #CCD4E7
+    box-sizing: border-box
+    border-radius: 8px
+    padding: 15px 5px 15px 20px
+    margin-top: 12px
+    +settings_text(500, 14px, 18px, #222222)
+
+.marital
+    appearance: none
+    width: 275px
+    background: #F2F3F7
+    border: 1px solid #CCD4E7
+    box-sizing: border-box
+    border-radius: 8px
+    background: url(../img/arrow.png) no-repeat right
+    background-position-x: calc(100% - 20px)
+    padding: 15px 5px 13px 20px
+    margin-top: 12px
+    +settings_text(500, 14px, 18px, #222222)
+
+.menu
+    margin-top: 100px
+    margin-left: 100px
+    width: 364px
+    height: 653px
+    background: #F2F3F7
+    box-shadow: -9px -9px 16px #FFFFFF, 9px 9px 16px rgba(209, 205, 199, 0.5)
+    border-radius: 20px
+    &-container
+        padding: 24px 32px
+    &-back
+        background: url(../img/back-arrow.png) left no-repeat
+        background-position: 13px 50%
+        width: 300px
+        height: 40px
+        border-radius: 8px
+        background-color: #e4eaf0
+
+.details__title 
+    box-shadow: inset 0px -2px 0px #CCD4E7, inset 0px -1px 0px #FBFCFF
+    padding: 14px 30px 14px 0
+    margin-top: 8px
+    outline: none
+    text-transform: uppercase
+    letter-spacing: 0.05em
+    +settings_text(bold, 12px, 16px, #222222)
+
+.details__link 
+    list-style-type: none
+    margin-top: 22px
+    +settings_text(600, 14px, 18px, #222222)
+    &::before
+        content: ""
+        position: absolute
+        width: 15px
+        height: 15px
+        background-image: url(../img/circle.png)
+        background-repeat: no-repeat
+        background-position: center 3px
+        margin-right: 10px
+        left: 10px
+
+.aside__details 
+  position: relative
+
+summary::-webkit-details-marker
+  display: none
+
+summary::after 
+  content: '\25B6'
+  font-size: 12px
+  color: #939BA3
+  position: absolute
+  right: 6px
+  transform: rotate(-90deg)
