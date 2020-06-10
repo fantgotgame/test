@@ -306,27 +306,16 @@ summary::after {
   transition: all 0.3s ease-in 0s;
 }
 
-.onoffswitch-switch2 {
-  display: block;
-  width: 29px;
-  margin: 6px;
-  background: #F2F3F7;
-  position: absolute;
-  top: 1px;
-  bottom: 10px;
-  right: 27px;
-  border: 2px solid #999999;
-  border-radius: 21px;
-  -webkit-transition: all 0.3s ease-in 0s;
-  transition: all 0.3s ease-in 0s;
-}
-
 .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
   margin-left: 0;
 }
 
 .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
   right: 0px;
+}
+
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch2 {
+  right: 0;
 }
 
 .input-address {
@@ -360,7 +349,7 @@ summary::after {
 }
 
 .input-yrs {
-  width: 60%;
+  width: 70%;
   background: #E5E5E5;
   border: 1px solid #CCD4E7;
   -webkit-box-sizing: border-box;
@@ -383,5 +372,75 @@ summary::after {
   font-size: 14px;
   line-height: 18px;
   color: #222222;
+}
+
+.onoffswitch-switch2 {
+  display: block;
+  width: 27px;
+  margin: 6px;
+  background: #F2F3F7;
+  position: absolute;
+  top: 1px;
+  bottom: 3px;
+  right: 27px;
+  border: 2px solid #999999;
+  border-radius: 21px;
+  -webkit-transition: all 0.3s ease-in 0s;
+  transition: all 0.3s ease-in 0s;
+}
+
+.former-address__text {
+  width: 507px;
+  height: 54px;
+  margin-top: 15px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color: #222222;
+}
+
+.button-next {
+  margin-top: 48px;
+  margin-bottom: 100px;
+  width: 100%;
+  height: 48px;
+  background-color: #198CFF;
+  border-radius: 8px;
+  color: #FFFFFF;
+  background-image: url(../img/next-arrow.png);
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+}
+
+.button-next__text {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  color: #FFFFFF;
+  padding: 15px 190px 15px 20px;
+  display: block;
+}
+
+.button-next:hover {
+  background: #939BA3;
+  background-image: url(../img/next-arrow.png);
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+.footer {
+  background: #2F303F;
+  height: 280px;
+}
+
+.footer-logo {
+  margin-left: 80px;
+  margin-right: 13px;
 }
 /*# sourceMappingURL=style.css.map */
