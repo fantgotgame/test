@@ -8,7 +8,7 @@ a:hover
     outline: none
 
 body
-    background: #E5E5E5
+    background: #F2F3F7
 
 html 
     position: relative
@@ -24,10 +24,7 @@ html
     &-row
         height: 100%
     &-logo
-       margin-left: 100px
        margin-right: 13px
-    &-block-text
-        margin-left: 54px
     &__text
         +settings_text (600, 14px, 18px, #222222)
     &-profile
@@ -83,7 +80,7 @@ html
 
 .years-number
     width: 147px
-    background: #E5E5E5
+    background: #F2F3F7
     border: 1px solid #CCD4E7
     box-sizing: border-box
     border-radius: 8px
@@ -113,7 +110,7 @@ html
     box-shadow: -9px -9px 16px #FFFFFF, 9px 9px 16px rgba(209, 205, 199, 0.5)
     border-radius: 20px
     &-container
-        padding: 24px 32px
+        padding: 12px 32px
     &-back
         background: url(../img/back-arrow.png) left no-repeat
         background-position: 13px 50%
@@ -179,7 +176,6 @@ summary::after
     display: block 
     overflow: hidden 
     cursor: pointer
-    border: 2px solid #999999 
     border-radius: 20px
 
 .onoffswitch-inner 
@@ -210,24 +206,22 @@ summary::after
     content: "NO"
     padding-right: 10px
     background-color: #EDEEF2 
-    
+    box-shadow: inset -4px -4px 6px rgba(199, 203, 209, 0.15), inset 4px 4px 6px rgba(199, 203, 209, 0.4)
     color: #4D4D4D
     text-align: right
 
 .onoffswitch-switch 
     display: block
-    width: 29px
+    width: 24px
     margin: 6px
     background: #F2F3F7
     position: absolute
-    top: 1px
-    bottom: 10px
-    right: 27px
-    border: 2px solid #999999
+    top: 0px
+    bottom: 8px
+    right: 34px
     border-radius: 21px
     -webkit-transition: all 0.3s ease-in 0s
     transition: all 0.3s ease-in 0s
-
 
 .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner 
     margin-left: 0
@@ -237,13 +231,14 @@ summary::after
 
 .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch2
     right: 0
+
 .input-address
     width: 100%
-    background: #E5E5E5
+    background: #F2F3F7
     border: 1px solid #CCD4E7
     box-sizing: border-box
     border-radius: 8px
-    padding: 15px 5px 15px 20px
+    padding: 14px 5px 14px 20px
     margin-top: 12px
     +settings_text(500, 14px, 18px, #222222)
 
@@ -261,11 +256,11 @@ summary::after
 
 .input-yrs
     width: 70%
-    background: #E5E5E5
+    background: #F2F3F7
     border: 1px solid #CCD4E7
     box-sizing: border-box
     border-radius: 8px
-    padding: 15px 5px 15px 20px
+    padding: 14px 5px 14px 20px
     margin-top: 12px
     +settings_text(500, 14px, 18px, #222222)
 
@@ -274,17 +269,18 @@ summary::after
 
 .onoffswitch-switch2
     display: block
-    width: 27px
+    width: 24px
     margin: 6px
     background: #F2F3F7
     position: absolute
-    top: 1px
-    bottom: 3px
-    right: 27px
-    border: 2px solid #999999
+    top: 0px
+    bottom: 0px
+    right: 34px
+    border: 2px solid #F2F3F7
     border-radius: 21px
     -webkit-transition: all 0.3s ease-in 0s
     transition: all 0.3s ease-in 0s
+    box-shadow: 0px 0px 4px rgba(199, 203, 209, 0.15), inset -1px -1px 4px rgba(199, 203, 209, 0.2), inset 4px 4px 4px rgba(255, 255, 255, 0.15)
 
 .former-address__text
     width: 507px
@@ -340,5 +336,165 @@ summary::after
     width: 244px
     height: 128px
     +settings_text(500, 16px, 32px, #FFFFFF)
+
+.turn-off__heading
+    display: none
+    margin-bottom: 20px
+
+.checkbox-group
+    position: relative
+    width: 160px
+    height: 48px
+    background: #F2F3F7
+    border-radius: 8px
+    border: 1px solid #CCD4E7
+    cursor: pointer
+
+.checkbox
+    visibility: hidden
+
+.checkbox-label
+    display: block
+    overflow: hidden
+
+.checkbox__switch, .checkbox__switch2
+    display: block
+    width: 74px
+    height: 40px
+    border-radius: 6px
+    background: #F2F3F7
+    box-shadow: 0px 0px 6px #C7CBD1, inset 4px 4px 6px rgba(255, 255, 255, 0.5)
+    position: absolute
+    top: 3px
+    left: 4px
+    transition: all 0.3s ease-in
+    cursor: pointer
+
+.checkbox__tag::before
+    content: "Rent"
+    position: absolute
+    +settings_text(500, 14px, 18px, #222222)
+    top: 14px
+    left: 20px
+    z-index: 1
+    cursor: pointer
+
+.checkbox__tag::after
+    content: "Own"
+    position: absolute
+    +settings_text(500, 14px, 18px, #939BA3)
+    top: 14px
+    left: 102px
+    z-index: 1
+    cursor: pointer
+
+.checkbox:checked + .checkbox-label .checkbox__switch
+    left: 80px
+
+.checkbox:checked + .checkbox-label .checkbox__switch2
+    left: 80px
+
+/* Icon 1 */
+
+.animated-icon1 
+    width: 24px
+    height: 24px
+    position: relative
+    margin: 0px
+    -webkit-transform: rotate(0deg)
+    -moz-transform: rotate(0deg)
+    -o-transform: rotate(0deg)
+    transform: rotate(0deg)
+    -webkit-transition: .5s ease-in-out
+    -moz-transition: .5s ease-in-out
+    -o-transition: .5s ease-in-out
+    transition: .5s ease-in-out
+    cursor: pointer
+
+.animated-icon1 span 
+    display: block
+    position: absolute
+    height: 3px
+    width: 100%
+    border-radius: 9px
+    opacity: 1
+    left: 0
+    -webkit-transform: rotate(0deg)
+    -moz-transform: rotate(0deg)
+    -o-transform: rotate(0deg)
+    transform: rotate(0deg)
+    -webkit-transition: .25s ease-in-out
+    -moz-transition: .25s ease-in-out
+    -o-transition: .25s ease-in-out
+    transition: .25s ease-in-out
+
+.animated-icon1 span 
+    background: #222222
+
+.animated-icon1 span:nth-child(1) 
+    top: 0px
+
+.animated-icon1 span:nth-child(2) 
+    top: 10px
+
+.animated-icon1 span:nth-child(3) 
+    top: 20px
+
+.animated-icon1.open span:nth-child(1) 
+    top: 11px
+    -webkit-transform: rotate(135deg)
+    -moz-transform: rotate(135deg)
+    -o-transform: rotate(135deg)
+    transform: rotate(135deg)
+
+.animated-icon1.open span:nth-child(2) 
+    opacity: 0
+    left: -60px
+
+.animated-icon1.open span:nth-child(3) 
+    top: 11px
+    -webkit-transform: rotate(-135deg)
+    -moz-transform: rotate(-135deg)
+    -o-transform: rotate(-135deg)
+    transform: rotate(-135deg)
+
+.header__toggler
+    display: none
+
+.navbar-toggler
+    //display: none
+    padding: 0
+
+.first-button, 
+    border: none
+    
+.first-button:focus
+    outline: none
+
+.navbar-toggler-icon
+    background-image: url(../img/burger.png)
+
+.menu__header
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15)
+
+.is-close
+    display: none
+
+.is-open
+    display: flex
+
+.navbar-light
+    padding: 0
+
+.menu-drop
+    padding: 0px 20px 0 20px
+
+.pad-div
+    padding: 0 20px 0 20px
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15)
+
+.menu__title
+    +settings_text(600, 20px, 24px, #000000)
+    padding: 12px 0
 
 @import _mediaQueries

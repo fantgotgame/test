@@ -14,20 +14,22 @@
 		<header class="header">
 			<div class="container">
 				<div class="row d-flex header-row">
-					<div class="col-lg-7 d-flex align-items-center">
+					<div class="col-lg-2 d-flex justify-content-end align-items-center header__left">
 						<a href="#">
 							<img src="img/logo.png" alt="Logo" class="header-logo">
-							<img src="img/logo-text.png" alt="Log text">
+							<img src="img/logo-text.png" class="ml-2" alt="Log text">
 						</a>
-						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsDefault"
-							aria-controls="navbarsDefault" aria-expanded="true" aria-label="Переключить навигацию">
+						<button class="navbar-toggler header__toggler collapsed" type="button" data-toggle="collapse" data-target="#dropMenu"
+							aria-controls="dropMenu" aria-expanded="false" aria-label="Переключить навигацию">
 							<span class="navbar-toggler-icon"></span>
 						</button>
+					</div>
+					<div class="col-lg-4 d-flex align-items-center">
 						<a href="#">
 							<span class="header-block-text header__text">Loans</span>
 						</a>
 					</div>
-					<div class="col-lg-5 d-flex align-items-center justify-content-center header-right">
+					<div class="col-lg-6 d-flex align-items-center justify-content-center header-right">
 						<div class="d-flex align-items-center header-profile">
 								<svg width="13" height="16" viewBox="0 0 13 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path
@@ -52,7 +54,106 @@
 				</div>
 			</div>
 		</header>
-		<main>
+		<!--Navbar-->
+		<nav class="navbar navbar-light amber lighten-4 mb-4 is-close">
+			<div class="pad-div col-12 d-flex justify-content-between">
+				<!-- Navbar brand -->
+				<a class="navbar-brand menu__title " href="#">Menu</a>
+				<!-- Collapse button -->
+				<button class="navbar-toggler first-button" type="button" data-toggle="collapse" data-target="#navbarSupportedContent20"
+					aria-controls="navbarSupportedContent20" aria-expanded="false" aria-label="Toggle navigation">
+					<div class="animated-icon1">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+				</button>
+			</div>
+			
+			<!-- Collapsible content -->
+			<div class="menu-drop collapse navbar-collapse" id="navbarSupportedContent20">
+				<!-- Links -->
+				<a href="#">
+					<div class="menu-back d-flex align-items-center pl-5">
+						<span class="header__text">Back to Rate Quote</span>
+					</div>
+				</a>
+				<details class="aside__details" open>
+					<summary class="details__title">Loan application</summary>
+					<ul class="details__list">
+						<a href="#">
+							<li class="details__link">Loan Terms</li>
+						</a>
+						<a href="#">
+							<li class="details__link">Property Details</li>
+						</a>
+						<a href="#">
+							<li class="details__link">About you</li>
+						</a>
+						<a href="#">
+							<li class="details__link">Track Record</li>
+						</a>
+						<a href="#">
+							<li class="details__link">Income and Employment</li>
+						</a>
+						<a href="#">
+							<li class="details__link">Government Monitoring</li>
+						</a>
+						<a href="#">
+							<li class="details__link">Your Assets</li>
+						</a>
+						<a href="#">
+							<li class="details__link">Declarations</li>
+						</a>
+						<a href="#">
+							<li class="details__link">Filling the Application</li>
+						</a>
+						<a href="#">
+							<li class="details__link">Signing the Documents</li>
+						</a>
+					</ul>
+				</details>
+				<details class="aside__details">
+					<summary class="details__title">document gathering</summary>
+					<ul class="details__list">
+						<a href="#">
+							<li class="details__link">Loan Terms</li>
+						</a>
+						<a href="#">
+							<li class="details__link">Property Details</li>
+						</a>
+						<a href="#">
+							<li class="details__link">About you</li>
+						</a>
+					</ul>
+				</details>
+				<details class="aside__details">
+					<summary class="details__title">Processing</summary>
+					<ul class="details__list">
+						<a href="#">
+							<li class="details__link">Loan Terms</li>
+						</a>
+						<a href="#">
+							<li class="details__link">Property Details</li>
+						</a>
+						<a href="#">
+							<li class="details__link">About you</li>
+						</a>
+						<a href="#">
+							<li class="details__link">Property Details</li>
+						</a>
+						<a href="#">
+							<li class="details__link">About you</li>
+						</a>
+					</ul>
+				</details>
+				<!-- Links -->
+			</div>
+			<!-- Collapsible content -->
+		</nav>
+		<!--/.Navbar-->
+		</div>
+		<main class="main">
 			<div class="wrapper container">
 				<div class="row">
 					<div class="col-md-6 content">
@@ -67,46 +168,64 @@
 										<span class="header__text">Years of school</span>
 										<div class="button-hint"></div>
 									</div>
-									<input  maxlength="4" type="text" class="years-number" placeholder="10">
+									<form action="#">
+										<input  maxlength="4" type="text" class="years-number" placeholder="10">
+									</form>
 								</div>
 								<div class="col-lg-6 col-md-12 mt-3 d-flex flex-column">
 									<span class="header__text">Marital status</span>
-									<select class="marital">
-										<option value="Single">Single (never been married)</option>
-										<option value="Married">Married</option>
-									</select>
+									<form action="#">
+										<select class="marital">
+											<option value="Single">Single (never been married)</option>
+											<option value="Married">Married</option>
+										</select>
+									</form>
 								</div>
 							</div>
 							<div class="mt-4 d-flex flex-column">
 								<span class="header__text">Do you have any dependants?</span>
 								<div class="onoffswitch">
-									<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" tabindex="0">
-									<label class="onoffswitch-label" for="myonoffswitch">
-										<span class="onoffswitch-inner"></span>
-										<span class="onoffswitch-switch"></span>
-									</label>
+									<form action="#">
+										<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" tabindex="0">
+										<label class="onoffswitch-label" for="myonoffswitch">
+											<span class="onoffswitch-inner"></span>
+											<span class="onoffswitch-switch"></span>
+										</label>
+									</form>
 								</div>
 							</div>
 						</div>
 						<div class="address mt-5">
 							<h2 class="section__title">Present Address</h2>
-							<div class="row d-flex align-items-center">
+							<div class="row d-flex align-items-end">
 								<div class="col-lg-6 col-md-12">
 									<div>
 										<h3 class="header__text mt-3">Your present address</h3>
-										<input maxlength="100" type="text" class="input-address" placeholder="Enter address">
+										<form action="#">
+											<input maxlength="100" type="text" class="input-address" placeholder="Enter address">
+										</form>
 									</div>
 								</div>
-								<div class="col-lg-4 col-md-6 col-6">
-									<h3 class="header__text mt-3">Status</h3>
-									
+								<div class="col-lg-4 col-md-6 col-7">
+									<h3 class="header__text mt-3 turn-off__heading">Status</h3>
+									<div class="checkbox-group">
+										<form action="#">
+											<input type="checkbox" class="checkbox" id="checkbox">
+											<label for="checkbox" class="checkbox-label">
+												<span class="checkbox__tag"></span>
+												<span class="checkbox__switch"></span>
+											</label>
+										</form>
+									</div>
 								</div>
 								<div class="col-lg-2 col-md-4 col-5">
 									<div class="d-flex align-items-center justify-content-between">
 										<h3 class="header__text mt-3">No. yrs</h3>
 										<div class="address-last-block"></div>
 									</div>
-									<input maxlength="2" type="text" class="input-yrs" placeholder="2">
+									<form action="#">
+										<input maxlength="2" type="text" class="input-yrs" placeholder="2">
+									</form>
 								</div>
 							</div>
 							<div class="mt-4">
@@ -116,16 +235,20 @@
 								</div>
 							</div>
 							<div class="onoffswitch">
-								<input type="checkbox" name="onoffswitch2" class="onoffswitch-checkbox" id="myonoffswitch1" tabindex="0" checked>
-								<label class="onoffswitch-label" for="myonoffswitch1">
-									<span class="onoffswitch-inner"></span>
-									<span class="onoffswitch-switch2"></span>
-								</label>
+								<form action="#">
+									<input type="checkbox" name="onoffswitch2" class="onoffswitch-checkbox" id="myonoffswitch1" tabindex="0" checked>
+									<label class="onoffswitch-label" for="myonoffswitch1">
+										<span class="onoffswitch-inner"></span>
+										<span class="onoffswitch-switch2"></span>
+									</label>
+								</form>
 							</div>
 							<div class="row mt-4">
 								<div class="col-12">
 									<span class="header__text">Your mailing address</span>
-									<input maxlength="100" type="text" class="input-address" placeholder="Enter address">
+									<form action="#">
+										<input maxlength="100" type="text" class="input-address" placeholder="Enter address">
+									</form>
 								</div>
 							</div>
 						</div>
@@ -137,23 +260,35 @@
 								years, please complete the history by listing your former
 								address or addresses.
 							</p>
-							<div class="row d-flex align-items-center">
+							<div class="row d-flex align-items-end">
 								<div class="col-lg-6 col-md-12">
 									<div>
 										<h3 class="header__text mt-3">Your former address</h3>
-										<input maxlength="100" type="text" class="input-address" placeholder="Enter address">
+										<form action="#">
+											<input maxlength="100" type="text" class="input-address" placeholder="Enter address">
+										</form>
 									</div>
 								</div>
-								<div class="col-lg-4 col-md-6 col-6">
-									<h3 class="header__text mt-3">Status</h3>
-									<input maxlength="100" type="text" class="input-address" placeholder="Enter address">
+								<div class="col-lg-4 col-md-6 col-7">
+									<h3 class="header__text mt-3 turn-off__heading">Status</h3>
+									<form action="#">
+										<div class="checkbox-group">
+											<input type="checkbox" class="checkbox" id="checkbox2">
+											<label for="checkbox2" class="checkbox-label">
+												<span class="checkbox__tag"></span>
+												<span class="checkbox__switch2"></span>
+											</label>
+										</div>
+									</form>
 								</div>
 								<div class="col-lg-2 col-md-4 col-5">
-									<div class="d-flex align-items-center justify-content-between">
-										<h3 class="header__text mt-3">No. yrs</h3>
-										<div class="address-last-block"></div>
-									</div>
-									<input maxlength="2" type="text" class="input-yrs" placeholder="2">
+									<form action="#">
+										<div class="d-flex align-items-center justify-content-between">
+											<h3 class="header__text mt-3">No. yrs</h3>
+											<div class="address-last-block"></div>
+										</div>
+										<input maxlength="2" type="text" class="input-yrs" placeholder="2">
+									</form>
 								</div>
 							</div>
 						</div>
@@ -332,6 +467,7 @@
 			</div>
 		</footer>
 	</body>
+	<script src="main.js"></script>
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>

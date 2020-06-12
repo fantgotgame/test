@@ -10,8 +10,6 @@
         height: 108px
     .header-logo
         margin: 0
-    .navbar-toggler
-        display: block
     .content__title::before
         display: none
     .content
@@ -21,5 +19,24 @@
     .footer-logo
         margin-left: 0
 
-
-
+@media only screen and (max-width:  991px)
+    .turn-off__heading
+        display: block
+    .header__left
+        display: flex
+        justify-content: space-between!important
+        height: 100%
+    
+@media only screen and (max-width:  575px)
+    .header__toggler
+        display: flex
+    .menu
+        width: 320px
+        margin: 0
+    .menu-back
+        margin-top: 24px
+        width: 280px
+    .menu__header
+        display: flex!important
+    
+    
