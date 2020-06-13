@@ -33,6 +33,7 @@ html {
 
 .header-logo {
   margin-right: 13px;
+  margin-left: 80px;
 }
 
 .header__text {
@@ -70,7 +71,7 @@ html {
 .content__title {
   -webkit-box-shadow: inset 0px -2px 0px #CCD4E7, inset 0px -1px 0px #FBFCFF;
           box-shadow: inset 0px -2px 0px #CCD4E7, inset 0px -1px 0px #FBFCFF;
-  padding: 28px 385px 28px 0;
+  padding: 28px 350px 28px 0;
   font-family: Montserrat;
   font-style: normal;
   font-weight: bold;
@@ -735,12 +736,18 @@ summary::after {
   .footer-logo {
     margin-left: 0;
   }
-}
-
-@media only screen and (max-width: 991px) {
+  .marital {
+    width: 100%;
+  }
+  .years-number {
+    width: 100%;
+  }
   .turn-off__heading {
     display: block;
   }
+}
+
+@media only screen and (max-width: 991px) {
   .header__left {
     display: -webkit-box;
     display: -ms-flexbox;
